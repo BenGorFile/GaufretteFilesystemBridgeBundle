@@ -1,0 +1,49 @@
+{
+    "name": "bengor-file/gaufrette-filesystem-bridge-bundle",
+    "description": "Symfony bundle that glues FileBundle and GaufretteFilesystemBridge",
+    "keywords": ["file", "bundle", "symfony", "gaufrette", "filesystem", "ddd"],
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "Beñat Espiña Diaz",
+            "email": "benatespina@gmail.com",
+            "homepage": "http://benatespina.com"
+        },
+        {
+            "name": "Gorka Laucirica Ibarra",
+            "email": "gorka.lauzirika@gmail.com",
+            "homepage": "http://gorkalaucirica.net"
+        }
+    ],
+    "require": {
+        "php": "^5.5 || ^7.0",
+        "bengor-file/gaufrette-filesystem-bridge": "dev-master",
+        "bengor/file-bundle": "dev-master",
+        "knplabs/knp-gaufrette-bundle": "^0.3"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^1.11",
+        "phpspec/phpspec": "^2.5"
+    },
+    "scripts": {
+        "cs": [
+            "php-cs-fixer fix --config-file=.php_cs",
+            "php-cs-fixer fix --config-file=.phpspec_cs"
+        ],
+        "test": "phpspec run"
+    },
+    "autoload": {
+        "psr-4": {
+            "BenGorFile\\GaufretteFilesystemBridgeBundle\\": "src/BenGorFile/GaufretteFilesystemBridgeBundle/"
+        },
+        "exclude-from-classmap": ["/spec/"]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
