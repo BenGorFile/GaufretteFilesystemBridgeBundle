@@ -54,7 +54,7 @@ class GaufretteFilesystemPassSpec extends ObjectBehavior
         $this->process($container);
     }
 
-    function it_processes_doctrine_orm(ContainerBuilder $container, Definition $definition)
+    function it_processes_gaufrette_filesystem(ContainerBuilder $container, Definition $definition)
     {
         $container->getParameter('bengor_file.config')->shouldBeCalled()->willReturn([
             'file_class' => [
