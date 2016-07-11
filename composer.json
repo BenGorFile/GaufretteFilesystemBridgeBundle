@@ -19,7 +19,7 @@
     "require": {
         "php": "^5.5 || ^7.0",
         "bengor-file/gaufrette-filesystem-bridge": "dev-master",
-        "bengor/file-bundle": "dev-master",
+        "bengor-file/file-bundle": "dev-master",
         "knplabs/knp-gaufrette-bundle": "^0.3"
     },
     "require-dev": {
