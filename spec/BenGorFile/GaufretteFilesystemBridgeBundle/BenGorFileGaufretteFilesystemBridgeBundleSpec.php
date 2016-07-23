@@ -13,7 +13,7 @@
 namespace spec\BenGorFile\GaufretteFilesystemBridgeBundle;
 
 use BenGorFile\GaufretteFilesystemBridgeBundle\DependencyInjection\Compiler\GaufretteFilesystemPass;
-use BenGorFile\GaufretteFilesystemBridgeBundle\GaufretteFilesystemBridgeBundle;
+use BenGorFile\GaufretteFilesystemBridgeBundle\BenGorFileGaufretteFilesystemBridgeBundle;
 use PhpSpec\ObjectBehavior;
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -25,11 +25,11 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @author Beñat Espiña <benatespina@gmail.com>
  */
-class GaufretteFilesystemBridgeBundleSpec extends ObjectBehavior
+class BenGorFileGaufretteFilesystemBridgeBundleSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType(GaufretteFilesystemBridgeBundle::class);
+        $this->shouldHaveType(BenGorFileGaufretteFilesystemBridgeBundle::class);
     }
 
     function it_extends_symfony_bundle()
@@ -45,8 +45,8 @@ class GaufretteFilesystemBridgeBundleSpec extends ObjectBehavior
     function it_builds(ContainerBuilder $container)
     {
         $container->getParameter('kernel.bundles')->shouldBeCalled()->willReturn([
-            'BenGorFileBundle'   => 'BenGorFile\\FileBundle\\BenGorFileBundle',
-            'KnpGaufretteBundle' => 'Knp\\Bundle\\GaufretteBundle\\KnpGaufretteBundle',
+            'BenGorFileBenGorFileBundle' => 'BenGorFile\\FileBundle\\BenGorFileBundle',
+            'KnpGaufretteBundle'         => 'Knp\\Bundle\\GaufretteBundle\\KnpGaufretteBundle',
         ]);
 
         $container->addCompilerPass(

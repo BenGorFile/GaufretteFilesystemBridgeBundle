@@ -23,7 +23,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @author Beñat Espiña <benatespina@gmail.com>
  */
-class GaufretteFilesystemBridgeBundle extends Bundle
+class BenGorFileGaufretteFilesystemBridgeBundle extends Bundle
 {
     use DependentBenGorFileBundle;
 
@@ -32,7 +32,7 @@ class GaufretteFilesystemBridgeBundle extends Bundle
      */
     public function build(ContainerBuilder $container)
     {
-        $this->checkDependencies(['BenGorFileBundle', 'KnpGaufretteBundle'], $container);
+        $this->checkDependencies(['BenGorFileBenGorFileBundle', 'KnpGaufretteBundle'], $container);
 
         $container->addCompilerPass(new GaufretteFilesystemPass(), PassConfig::TYPE_OPTIMIZE);
     }
