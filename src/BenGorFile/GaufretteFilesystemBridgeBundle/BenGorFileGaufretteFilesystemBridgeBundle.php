@@ -32,7 +32,7 @@ class BenGorFileGaufretteFilesystemBridgeBundle extends Bundle
      */
     public function build(ContainerBuilder $container)
     {
-        $this->checkDependencies(['BenGorFileBenGorFileBundle', 'KnpGaufretteBundle'], $container);
+        $this->checkDependencies(['BenGorFileBundle', 'KnpGaufretteBundle'], $container);
 
         $container->addCompilerPass(new GaufretteFilesystemPass(), PassConfig::TYPE_OPTIMIZE);
     }

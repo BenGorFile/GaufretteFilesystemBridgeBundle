@@ -45,8 +45,8 @@ class BenGorFileGaufretteFilesystemBridgeBundleSpec extends ObjectBehavior
     function it_builds(ContainerBuilder $container)
     {
         $container->getParameter('kernel.bundles')->shouldBeCalled()->willReturn([
-            'BenGorFileBenGorFileBundle' => 'BenGorFile\\FileBundle\\BenGorFileBundle',
-            'KnpGaufretteBundle'         => 'Knp\\Bundle\\GaufretteBundle\\KnpGaufretteBundle',
+            'BenGorFileBundle'   => 'BenGorFile\\FileBundle\\BenGorFileBundle',
+            'KnpGaufretteBundle' => 'Knp\\Bundle\\GaufretteBundle\\KnpGaufretteBundle',
         ]);
 
         $container->addCompilerPass(
