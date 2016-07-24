@@ -53,7 +53,7 @@ class GaufretteFilesystemPass implements CompilerPassInterface
             )->setPublic(false);
 
             $container->setDefinition(
-                'bengor.file.infrastructure.domain.model.gaufrette_filesystem_' . $key,
+                'bengor.file.infrastructure.domain.model.' . $key . '_filesystem',
                 new Definition(
                     GaufretteFilesystem::class, [
                         new Reference('bengor_file.filesystem.gaufrette.' . $key),
@@ -63,7 +63,7 @@ class GaufretteFilesystemPass implements CompilerPassInterface
 
             $container->setAlias(
                 'bengor_file.' . $key . '.filesystem',
-                'bengor.file.infrastructure.domain.model.gaufrette_filesystem_' . $key
+                'bengor.file.infrastructure.domain.model.' . $key . '_filesystem'
             );
         }
     }
