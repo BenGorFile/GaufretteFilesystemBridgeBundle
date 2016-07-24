@@ -12,8 +12,8 @@
 
 namespace spec\BenGorFile\GaufretteFilesystemBridgeBundle;
 
-use BenGorFile\GaufretteFilesystemBridgeBundle\DependencyInjection\Compiler\GaufretteFilesystemPass;
 use BenGorFile\GaufretteFilesystemBridgeBundle\BenGorFileGaufretteFilesystemBridgeBundle;
+use BenGorFile\GaufretteFilesystemBridgeBundle\DependencyInjection\Compiler\GaufretteFilesystemPass;
 use PhpSpec\ObjectBehavior;
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

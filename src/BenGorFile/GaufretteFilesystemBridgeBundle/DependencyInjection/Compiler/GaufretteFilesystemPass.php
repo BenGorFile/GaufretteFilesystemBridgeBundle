@@ -36,7 +36,7 @@ class GaufretteFilesystemPass implements CompilerPassInterface
     {
         $config = $container->getParameter('bengor_file.config');
         foreach ($config['file_class'] as $key => $file) {
-            if ('gaufrette' !== key($file['filesystem'])) {
+            if ('gaufrette' !== $file['storage']) {
                 continue;
             }
 
@@ -44,7 +44,7 @@ class GaufretteFilesystemPass implements CompilerPassInterface
                 'bengor_file.filesystem.gaufrette.' . $key,
                 (new Definition(
                     Filesystem::class, [
-                        $file['filesystem']['gaufrette'],
+                        $file['upload_destination'],
                     ]
                 ))->setFactory([
                     new Reference('knp_gaufrette.filesystem_map'),

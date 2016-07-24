@@ -41,12 +41,11 @@ class GaufretteFilesystemPassSpec extends ObjectBehavior
         $container->getParameter('bengor_file.config')->shouldBeCalled()->willReturn([
             'file_class' => [
                 'file' => [
-                    'class'       => 'AppBundle\Entity\File',
-                    'firewall'    => 'main',
-                    'persistence' => 'doctrine_orm',
-                    'filesystem'  => [
-                        'symfony' => '/symfony/filesystem/path',
-                    ],
+                    'class'              => 'AppBundle\Entity\File',
+                    'firewall'           => 'main',
+                    'persistence'        => 'doctrine_orm',
+                    'storage'            => 'symfony',
+                    'upload_destination' => '/symfony/filesystem/path',
                 ],
             ],
         ]);
@@ -59,12 +58,11 @@ class GaufretteFilesystemPassSpec extends ObjectBehavior
         $container->getParameter('bengor_file.config')->shouldBeCalled()->willReturn([
             'file_class' => [
                 'file' => [
-                    'class'       => 'AppBundle\Entity\File',
-                    'firewall'    => 'main',
-                    'persistence' => 'doctrine_orm',
-                    'filesystem'  => [
-                        'gaufrette' => 'gaufrette-configured-filesystem',
-                    ],
+                    'class'              => 'AppBundle\Entity\File',
+                    'firewall'           => 'main',
+                    'persistence'        => 'doctrine_orm',
+                    'storage'            => 'gaufrette',
+                    'upload_destination' => 'gaufrette-configured-filesystem',
                 ],
             ],
         ]);
