@@ -18,8 +18,8 @@
     ],
     "require": {
         "php": "^5.5 || ^7.0",
-        "bengor-file/gaufrette-filesystem-bridge": "dev-master",
-        "bengor-file/file-bundle": "dev-master",
+        "bengor-file/gaufrette-filesystem-bridge": "^1.0.0",
+        "bengor-file/file-bundle": "^0.2.0",
         "knplabs/knp-gaufrette-bundle": "^0.3"
     },
     "require-dev": {
@@ -43,7 +43,5 @@
         "branch-alias": {
             "dev-master": "1.1.x-dev"
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
